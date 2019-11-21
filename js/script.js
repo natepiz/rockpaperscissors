@@ -46,12 +46,14 @@ if(
     human === "sissors" && computer === "paper"
 ) {
     winner = human;
-}  else if(human === "rock" && computer === "sissors") {
-    winner = human;   
-}  else if (human === "sissors" && computer === "paper"){
-    winner = human;
 }  else if (human === computer){
-     winner = "ya both suck :)";
- }
+     winner = "ya both suck tbh :)";
+    }
+    else (computer === "paper" && human === "rock" || 
+    computer === "rock" && human === "sissors" || 
+    computer === "sissors" && human === "paper"){
+        winner = "computer won"
+    }
 });
+
 
