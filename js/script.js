@@ -17,19 +17,41 @@
 let human = "";
 let computer = "";
 let winner = "";
-let random = 0;
+let random = ;
 $("#shoot").click(function() {
-    alert('hello');
     let input = $("input").val();
-    $("#userChoice").html(input)
+    $("#userChoice").html(input);
     random =  Math.random() 
-    if(random < .33 ){
-        
-} else if(condition){
 
+    if(random < .33 ){
+        computer = "rock";
+} else if(random >.66){
+        computer = "paper"
 } else {
+    computer = "sissors"
 }
 
+// check human choice vs computer choice
+/**
 
+paper beat rocks\
+rock beats sissors
+sissors beats paper
+paper = paper
+
+ *//
+if(
+    human === "paper" && computer === "rock" || 
+    human === "rock" && computer === "sissors" || 
+    human === "sissors" && computer === "paper"
+) {
+    winner = human;
+}  else if(human === "rock" && computer === "sissors") {
+    winner = human;   
+}  else if (human === "sissors" && computer === "paper"){
+    winner = human;
+}  else if (human === computer){
+     winner = "ya both suck :)";
+ }
 });
 
